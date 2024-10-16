@@ -45,7 +45,7 @@ public class LoginTest {
     @Then("the user should be navigated to the dashboard")
     public void validateLogin() throws Exception
     {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         Assert.assertEquals(driver.getCurrentUrl(),"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
         driver.quit();
     }
