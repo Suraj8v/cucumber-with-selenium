@@ -25,42 +25,35 @@ public class LoginTest {
     @When("the user enters valid username and password")
     public void enterDetails() throws Exception
     {
-        try {
+
             Thread.sleep(2000);
             WebElement username = driver.findElement(By.xpath("//input[@name='username']"));
             username.sendKeys("Admin");
 
             WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
             password.sendKeys("admin123");
-        } catch (Exception e) {
-           e.printStackTrace();
-        }
+
     }
 
     @When("clicks on the login button")
     public void clickLoginButton() throws Exception {
 
-        try {
             Thread.sleep(2000);
 
             WebElement loginButton = driver.findElement(By.xpath("//button[text()=' Login ']"));
             loginButton.click();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 
     @Then("the user should be navigated to the dashboard")
     public void validateLogin() throws Exception
     {
-        try {
+
             Thread.sleep(3000);
             String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
             Assert.assertEquals(driver.getCurrentUrl(),expectedUrl );
             driver.quit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 
 }
