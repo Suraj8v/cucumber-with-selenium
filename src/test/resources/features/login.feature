@@ -5,3 +5,4 @@ Feature: Login Functionality
     When the user enters valid username and password
     And clicks on the login button
     Then the user should be navigated to the dashboard
+    Then check the employee
