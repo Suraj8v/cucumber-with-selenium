@@ -25,42 +25,42 @@ public class LoginTest {
     @When("the user enters valid username and password")
     public void enterDetails() throws Exception
     {
-        try {
+
             Thread.sleep(2000);
             WebElement username = driver.findElement(By.xpath("//input[@name='username']"));
             username.sendKeys("Admin");
 
             WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
             password.sendKeys("admin123");
-        } catch (Exception e) {
-           e.printStackTrace();
-        }
+
     }
 
     @When("clicks on the login button")
     public void clickLoginButton() throws Exception {
 
-        try {
             Thread.sleep(2000);
 
             WebElement loginButton = driver.findElement(By.xpath("//button[text()=' Login ']"));
             loginButton.click();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 
     @Then("the user should be navigated to the dashboard")
     public void validateLogin() throws Exception
     {
-        try {
+
             Thread.sleep(3000);
             String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
             Assert.assertEquals(driver.getCurrentUrl(),expectedUrl );
+<<<<<<< HEAD
            // driver.quit();
         } catch (Exception e) {
             e.printStackTrace();
         }
+=======
+            driver.quit();
+
+>>>>>>> b7290d0c7b63648dc94869b37ee89de0482d833f
     }
     //Validate if the newly added employee name present in the Employee list or not.
     @Then("check the employee")
