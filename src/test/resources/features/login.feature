@@ -8,15 +8,15 @@ Feature: Login Functionality
     And clicks on the PLM button and Add employee button
     When the user fills out the form with the following details
       | first_name | middle_name | last_name | employee_id | username    | password   | confirm_password |
-      | John       | A.          | Doe       | 12345       | jdoeadoe    | J0hnDoe!   | J0hnDoe!        |
-      | Jane       | B.          | Smith     | 12346       | jsmith      | Jan3Smith  | Jan3Smith       |
-      | Michael    | C.          | Johnson    | 12347       | mjohnson    | M1keJ0hn!  | M1keJ0hn!       |
-      | Emily      | D.          | Brown     | 12348       | ebrown      | Em!ly2023   | Em!ly2023       |
-      | Robert     | E.          | Davis      | 12349       | rdavis      | R0bert123!  | R0bert123!      |
-      | Lisa       | F.          | Miller     | 12350       | lmiller     | L1s@Miller  | L1s@Miller      |
-      | David      | G.          | Wilson     | 12351       | dwilson     | Dav!d456    | Dav!d456        |
-      | Sarah      | H.          | Garcia     | 12352       | sgarcia     | S4rahG!@    | S4rahG!@        |
-     Then check the employee
+      | John       | A.          | Doe       | 431202      | jdo226   | J0hnDoe!   | J0hnDoe!        |
+      | Jane       | B.          | Smith     | 451202   | jsmith226     | Jan3Smith  | Jan3Smith       |
+      | Michael    | C.          | Johnson    | 751202      | mjoh226    | M1keJ0hn!  | M1keJ0hn!       |
+     And search all users
+      | employee_id |
+      | 431202      | 
+      | 451202     | 
+      | 751202       |
+  #    Then check the employee
     Examples:
       | username | password |
 #      | ram      | ram1     |
